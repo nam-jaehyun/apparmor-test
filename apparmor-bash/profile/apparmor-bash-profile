@@ -1,0 +1,12 @@
+#include <tunables/global>
+
+/home/USER/apparmor-test/apparmor-bash/bash {
+  #include <abstractions/base>
+  #include <abstractions/bash>
+  #include <abstractions/consoles>
+  #include <abstractions/lxc/container-base>
+
+  #deny /bin/touch x,
+  #deny /bin/rm x,
+  deny /bin/sleep x,
+}
